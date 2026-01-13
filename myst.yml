@@ -3,6 +3,7 @@ project:
   title: Little Notes
   authors:
     - name: Le Nhut Nam
+  copyright: '{% now ''local'', ''%Y'' %}'
   github: namlnhut/little-notes
   bibliography:
     - references.bib
@@ -38,6 +39,6 @@ project:
         - file: statistics/regression-analysis.md
 site:
   options:
-    logo: ''
+    logo: logo.png
     folders: true
   template: book-theme

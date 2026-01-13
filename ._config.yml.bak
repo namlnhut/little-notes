@@ -1,7 +1,8 @@
 # Book settings
-title: Little Notes
-author: Your Name
-logo: ""
+title                       : Little Notes  # The title of the book. Will be placed in the left navbar.
+author                      : Le Nhut Nam  # The author of the book
+copyright                   : "{% now 'local', '%Y' %}"  # Copyright year to be placed in the footer
+logo                        : logo.png  # A path to the book logo
 
 # Force re-execution of notebooks on each build
 execute:
@@ -18,7 +19,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/yourusername/little-notes
+  url: https://github.com/namlnhut/little-notes
   path_to_book: docs
   branch: main
 
