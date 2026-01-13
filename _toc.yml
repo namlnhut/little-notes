@@ -1,0 +1,31 @@
+# Table of contents
+format: jb-book
+root: intro
+chapters:
+  - file: machine-learning/index
+    sections:
+      - file: machine-learning/supervised-learning
+      - file: machine-learning/unsupervised-learning
+      - file: machine-learning/deep-learning
+      - file: machine-learning/model-evaluation
+
+  - file: scientific-computing/index
+    sections:
+      - file: scientific-computing/numpy-basics
+      - file: scientific-computing/data-manipulation
+      - file: scientific-computing/visualization
+      - file: scientific-computing/numerical-methods
+
+  - file: mathematics/index
+    sections:
+      - file: mathematics/linear-algebra
+      - file: mathematics/calculus
+      - file: mathematics/optimization
+      - file: mathematics/probability
+
+  - file: statistics/index
+    sections:
+      - file: statistics/descriptive-statistics
+      - file: statistics/inferential-statistics
+      - file: statistics/hypothesis-testing
+      - file: statistics/regression-analysis
