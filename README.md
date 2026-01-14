@@ -29,23 +29,23 @@ pip install -r requirements.txt
 To build the HTML version of the book:
 
 ```bash
-jupyter-book build .
+jupyter-book build little-notes/
 ```
 
-The generated HTML files will be in `_build/html/`. Open `_build/html/index.html` in your browser to view the book.
+The generated HTML files will be in `little-notes/_build/html/`. Open `little-notes/_build/html/index.html` in your browser to view the book.
 
 ## Cleaning Build Files
 
 To remove previous build files:
 
 ```bash
-jupyter-book clean .
+jupyter-book clean little-notes/
 ```
 
 To remove all build files including cached outputs:
 
 ```bash
-jupyter-book clean --all .
+jupyter-book clean --all little-notes/
 ```
 
 ## Publishing
@@ -89,62 +89,63 @@ If you prefer to deploy manually:
 
 ```bash
 pip install ghp-import
-jupyter-book build .
-ghp-import -n -p -f _build/html
+jupyter-book build little-notes/
+ghp-import -n -p -f little-notes/_build/html
 ```
 
 ## Development
 
 ### Adding New Content
 
-1. Create new markdown (.md) or Jupyter notebook (.ipynb) files in the appropriate section folder
-2. Update `_toc.yml` to include the new files
+1. Create new markdown (.md) or Jupyter notebook (.ipynb) files in the appropriate section folder under `little-notes/`
+2. Update `little-notes/_toc.yml` to include the new files
 3. Rebuild the book
 
 ### Customization
 
-- Edit `_config.yml` to change book settings, title, author, etc.
-- Edit `_toc.yml` to modify the table of contents structure
-- Add custom CSS in `_static/` folder (create if needed)
+- Edit `little-notes/_config.yml` to change book settings, title, author, etc.
+- Edit `little-notes/_toc.yml` to modify the table of contents structure
+- Add custom CSS in `little-notes/_static/` folder (create if needed)
 
 ## Project Structure
 
 ```
-little-notes/
+.
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml       # GitHub Actions workflow
-├── _config.yml              # Book configuration
-├── _toc.yml                 # Table of contents
-├── .gitignore               # Git ignore file
-├── intro.md                 # Landing page
-├── references.bib           # Bibliography
-├── requirements.txt         # Python dependencies
-├── README.md                # This file
-├── machine-learning/        # Machine learning section
-│   ├── index.md
-│   ├── supervised-learning.md
-│   ├── unsupervised-learning.md
-│   ├── deep-learning.md
-│   └── model-evaluation.md
-├── scientific-computing/    # Scientific computing section
-│   ├── index.md
-│   ├── numpy-basics.md
-│   ├── data-manipulation.md
-│   ├── visualization.md
-│   └── numerical-methods.md
-├── mathematics/             # Mathematics section
-│   ├── index.md
-│   ├── linear-algebra.md
-│   ├── calculus.md
-│   ├── optimization.md
-│   └── probability.md
-└── statistics/              # Statistics section
-    ├── index.md
-    ├── descriptive-statistics.md
-    ├── inferential-statistics.md
-    ├── hypothesis-testing.md
-    └── regression-analysis.md
+│       └── deploy.yml           # GitHub Actions workflow
+├── little-notes/                # Jupyter Book source
+│   ├── _config.yml              # Book configuration
+│   ├── _toc.yml                 # Table of contents
+│   ├── intro.md                 # Landing page
+│   ├── references.bib           # Bibliography
+│   ├── machine-learning/        # Machine learning section
+│   │   ├── index.md
+│   │   ├── supervised-learning.md
+│   │   ├── unsupervised-learning.md
+│   │   ├── deep-learning.md
+│   │   └── model-evaluation.md
+│   ├── scientific-computing/    # Scientific computing section
+│   │   ├── index.md
+│   │   ├── numpy-basics.md
+│   │   ├── data-manipulation.md
+│   │   ├── visualization.md
+│   │   └── numerical-methods.md
+│   ├── mathematics/             # Mathematics section
+│   │   ├── index.md
+│   │   ├── linear-algebra.md
+│   │   ├── calculus.md
+│   │   ├── optimization.md
+│   │   └── probability.md
+│   └── statistics/              # Statistics section
+│       ├── index.md
+│       ├── descriptive-statistics.md
+│       ├── inferential-statistics.md
+│       ├── hypothesis-testing.md
+│       └── regression-analysis.md
+├── .gitignore                   # Git ignore file
+├── requirements.txt             # Python dependencies
+└── README.md                    # This file
 ```
 
 ## License
