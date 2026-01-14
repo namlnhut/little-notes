@@ -20,7 +20,7 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/namlnhut/little-notes
-  path_to_book: docs
+  path_to_book: little-notes
   branch: main
 
 # Add GitHub buttons to your book

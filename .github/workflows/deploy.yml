@@ -39,12 +39,12 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          jupyter-book build my_book/my_book/
+          jupyter-book build little-notes/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'my_book/my_book/_build/html'
+          path: 'little-notes/_build/html'
 
   deploy:
     needs: build
